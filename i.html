@@ -1,0 +1,128 @@
+<html>
+   <head>
+      <script>
+         
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+           
+         
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+           
+
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+      </script>
+      
+      <style>
+         body{
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             background-color: palegoldenrod;
+         }
+         .title{
+        
+         text-align:center;
+         
+         
+         border: solid black 2px;
+         width:300px;
+         height:35px;
+         background-color: rgb(212, 139, 42);
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         top:20px;
+         position: relative;
+            font-size: 30px;
+           box-shadow:0 4px 8px 0 rgba(0,0,0,0.2) ,0 6px 20px rgba(0,0,0,0.19);
+         }
+  
+         input[type="button"]
+         {
+         background: color #8c7fb1;
+         color: rgb(19, 15, 16);
+         cursor:pointer;
+         margin-bottom: 60px;
+         
+         
+height:50px;
+margin:18px;
+float:right;
+border-radius: 50%;
+border: 0;
+font-weight:bold;
+font-size: 20px;
+position :center;
+top:auto;
+padding-right: 60px;
+         padding: left 70px ;
+         margin-left: 90px;
+         margin-right: 60px;
+         
+
+
+         }
+         
+  
+         input[type="text"]
+         {
+         background-color:rgb(243, 237, 240);
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         width:100%;
+         font-size: bold 5px;
+height:50px;
+margin:15px;
+float:center;
+
+border: rgb(136, 132, 132) 1px;
+
+font-size: 20px;
+
+         }
+      </style>
+   </head>
+   <!-- create table -->
+   <body>
+      <div class = title >Simple Calculator</div>
+      <table border="1">
+         <tr>
+            <td colspan="3"><input type="text" id="result"/></td>
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="c" onclick="clr()"/> </td>
+         </tr>
+         <tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')"/> </td>
+            <td><input type="button" value="2" onclick="dis('2')"/> </td>
+            <td><input type="button" value="3" onclick="dis('3')"/> </td>
+            <td><input type="button" value="/" onclick="dis('/')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="4" onclick="dis('4')"/> </td>
+            <td><input type="button" value="5" onclick="dis('5')"/> </td>
+            <td><input type="button" value="6" onclick="dis('6')"/> </td>
+            <td><input type="button" value="-" onclick="dis('-')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="7" onclick="dis('7')"/> </td>
+            <td><input type="button" value="8" onclick="dis('8')"/> </td>
+            <td><input type="button" value="9" onclick="dis('9')"/> </td>
+            <td><input type="button" value="+" onclick="dis('+')"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="." onclick="dis('.')"/> </td>
+            <td><input type="button" value="0" onclick="dis('0')"/> </td>
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"/> </td>
+            <td><input type="button" value="*" onclick="dis('*')"/> </td>
+         </tr>
+      </table>
+   </body>
+</html>   
